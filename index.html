@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ses Efekti</title>
     <style>
+        /* Genel Ayarlar */
         body {
             display: flex;
             justify-content: center;
@@ -12,31 +13,39 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            background-color: #000; /* Arka plan siyah */
         }
+
+        /* Buton Stili */
         button {
-            padding: 20px 40px;
-            font-size: 18px;
+            padding: 20px 50px;
+            font-size: 20px;
             font-weight: bold;
             color: white;
-            background-color: #007bff;
+            background-color: #ff0000; /* Parlak kırmızı */
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transition: transform 0.1s ease, box-shadow 0.1s ease;
+            box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff0000; /* Neon ışık */
+            text-shadow: 0 0 10px white, 0 0 20px white;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
+
+        /* Hover Durumu */
         button:hover {
-            background-color: #0056b3;
+            transform: scale(1.1);
+            box-shadow: 0 0 30px #ff4d4d, 0 0 60px #ff4d4d, 0 0 90px #ff4d4d; /* Daha parlak neon */
         }
+
+        /* Aktif (Basılma) Durumu */
         button:active {
-            transform: scale(0.95);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transform: scale(1);
+            box-shadow: 0 0 15px #b30000, 0 0 30px #b30000; /* Daha az parlak */
         }
     </style>
 </head>
 <body>
-    <button id="playSound">DININI!</button>
+    <button id="playSound">Sesi Çal</button>
 
     <audio id="audio" src="dinini.mp3"></audio>
 
